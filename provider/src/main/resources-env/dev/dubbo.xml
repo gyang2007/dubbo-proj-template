@@ -7,7 +7,7 @@
 
     <dubbo:application name="simple_dubbo_provider" owner="gyang" organization="open"/>
               
-    <dubbo:registry address="127.0.0.1:2181" group="partner_dev" protocol="zookeeper"  id="dubboZK" default="true"/>
+    <dubbo:registry address="127.0.0.1:2181" group="provider_dev" protocol="zookeeper"  id="dubboZK" default="true"/>
 
     <dubbo:protocol name="dubbo" port="20991"  accesslog="true"  threads="200"/>
 

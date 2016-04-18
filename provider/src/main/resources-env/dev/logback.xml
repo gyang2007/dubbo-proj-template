@@ -21,7 +21,7 @@
 		</encoder>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>
-				${log.dir}/ibeplus.log.%d{yyyy-MM-dd-HH}.gz
+				${log.dir}/web.log.%d{yyyy-MM-dd-HH}.gz
 			</fileNamePattern>
 		</rollingPolicy>
 	</appender>

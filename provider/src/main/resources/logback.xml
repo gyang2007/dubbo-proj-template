@@ -9,9 +9,9 @@
               value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{traceId}] [%thread] %logger{0}.%M:%L -- %msg%n"/>
 
     <!-- log file default -->
-    <appender name="pid_partner"
+    <appender name="provider"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.dir}/partner.log</file>
+        <file>${log.dir}/web.log</file>
         <prudent>false</prudent>
         <Append>true</Append>
         <encoder>
@@ -19,13 +19,13 @@
             <charset>${encoding}</charset>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/partner.log.%d{yyyy-MM-dd-HH}.gz
+            <fileNamePattern>${log.dir}/web.log.%d{yyyy-MM-dd-HH}.gz
             </fileNamePattern>
         </rollingPolicy>
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="pid_partner"/>
+        <appender-ref ref="provider"/>
     </root>
 
 </configuration>
