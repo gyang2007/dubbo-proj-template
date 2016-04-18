@@ -5,7 +5,6 @@ import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.*;
 import com.gyang.bean.BaseParam;
 import com.gyang.util.MsgIdGenerator;
-import com.qunar.flight.qmonitor.QMonitor;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -48,7 +47,6 @@ public class DubboInvokeTraceIdFilter implements Filter {
                         break;
                     } catch (Exception e) {
                         LOGGER.error("Rpc filter to set traceId exp!", e);
-                        QMonitor.recordOne("rpc_filter_set_traceid_error");
                     }
                 }
             }
