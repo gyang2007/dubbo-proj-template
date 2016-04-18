@@ -15,7 +15,8 @@ import javax.servlet.ServletContextListener;
  *
  */
 public class SpringWrapper implements ServletContextListener {
-    private static final Logger logger = LoggerFactory.getLogger(SpringWrapper.class);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpringWrapper.class);
 
     private static WebApplicationContext springContext;
     
