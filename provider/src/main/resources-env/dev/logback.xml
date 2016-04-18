@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- slf4j日志配置文件 -->
+<configuration debug="false" scan="false" scanPeriod="30 seconds">
+	<!-- 设置日志输出根目录 -->
+	<property name="log.dir" value="${catalina.base}/logs" />
+	<property name="encoding" value="UTF-8" />
+
+	<property name="normal-pattern"
+		value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] [%X{traceId}] %logger{10}.%M:%L - %msg%n" />
+	<property name="plain-pattern" value="%d{yyyy-MM-dd HH:mm:ss} - %msg%n" />
+
+	<!-- log file default -->
+	<appender name="fileDefault"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.dir}/web.log</file>
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>
+				${log.dir}/ibeplus.log.%d{yyyy-MM-dd-HH}.gz
+			</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="console" />
+	</root>
+
+</configuration>

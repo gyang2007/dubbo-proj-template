@@ -1,0 +1,1 @@
+invokeTraceIdFilter=com.gyang.dubbo.filte.DubboInvokeTraceIdFilter
