@@ -9,7 +9,7 @@
         <artifactId>dubbo-proj-template</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-<!--依 -->         
+    
     <artifactId>template.api</artifactId>
     <packaging>jar</packaging>
 
